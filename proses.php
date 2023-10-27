@@ -3,8 +3,8 @@ require("routeros_api.class.php");
 $API = new routeros_api();
 $API->debug = false;
 $username_mikrotik  = "xervio";
-$password_mikrotik  = "";
-$iphost_mikrotik    = "192.168.4.1";
+$password_mikrotik  = "lead2707";
+$iphost_mikrotik    = "id3.labkom.us:6564";
 
 if($API->connect($iphost_mikrotik, $username_mikrotik, $password_mikrotik)){
 $username 	= $_POST['username'];
@@ -16,7 +16,7 @@ $mac	  	= $_POST['mac'];
 			"?name"     => $username,
 			));
 	if(count($cekuser)>0){
-		echo "<script>window.location='http://192.168.14.1/gagal.html'</script>";
+		echo "<script>window.location='http://10.10.10.1/gagal.html'</script>";
 	}else{
     $API->comm("/ip/hotspot/user/add", array(
 			"server"		=> "all",
@@ -27,7 +27,7 @@ $mac	  	= $_POST['mac'];
 			"comment"		=> $nomor,
 			"limit-uptime"	=> "00:30:00",
 			));
-    echo "<script>window.location='http://192.168.14.1/login?username=".$username."&password=".$password."'</script>";
+    echo "<script>window.location='http://10.10.10.1/login?username=".$username."&password=".$password."'</script>";
 		}
 		$API->disconnect();
 	} 

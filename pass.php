@@ -4,7 +4,7 @@ $API = new routeros_api();
 $API->debug = false;
 $user_mikrotik  = "xervio";
 $password_mikrotik  = "lead2707";
-$ip_mikrotik    = "192.168.4.1";
+$ip_mikrotik    = "id3.labkom.us:6564";
 
 if($API->connect($ip_mikrotik, $user_mikrotik, $password_mikrotik)){
   $username = $_POST['username'];
@@ -14,7 +14,7 @@ if($API->connect($ip_mikrotik, $user_mikrotik, $password_mikrotik)){
           "password"	 	=> $password,
   
 			));
- echo "<script>window.location='http://192.168.14.1/sukses.html'</script>";
+ echo "<script>window.location='http://10.10.10.1/sukses.html'</script>";
 } else {
   echo "Mikrotik tidak konek";
   }
