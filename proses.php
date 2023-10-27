@@ -19,8 +19,8 @@ $mac	  	= $_POST['mac'];
 		echo "<script>window.location='http://10.10.10.1/gagal.html'</script>";
 	}else{
     $API->comm("/ip/hotspot/user/add", array(
-			"server"		=> "all",
-			"profile"		=> "tamu",
+			"server"		=> "hotspot1",
+			"profile"		=> "TAMU",
 			"name"     		=> $username,
 			"password"		=> $password,
 			"mac-address"	=> $mac,		
