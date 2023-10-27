@@ -2,7 +2,7 @@
 require("routeros_api.class.php");
 $API = new routeros_api();
 $API->debug = false;
-$username_mikrotik  = "admin";
+$username_mikrotik  = "xervio";
 $password_mikrotik  = "";
 $iphost_mikrotik    = "192.168.4.1";
 
